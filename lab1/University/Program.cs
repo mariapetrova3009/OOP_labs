@@ -4,7 +4,7 @@ using University.Repositories;
 using University.Services;
 using University.Entities;
 
-Console.WriteLine("=== Система управления курсами — простой сценарий ===");
+Console.WriteLine("Система управления курсами\n");
 
 // репозитории и сервис
 var courseRepo  = new InMemoryCourseRepository();
@@ -56,7 +56,9 @@ foreach (var c in courseRepo.GetAll())
             Console.WriteLine($"  - {studentRepo.Get(sid)?.FullName}");
     else
         Console.WriteLine("  (студентов нет)");
+    Console.WriteLine("\n");
 }
+
 
 // получить курсы преподавателя
 var t1Courses = svc.GetCoursesByTeacher(t1.Id);
