@@ -4,12 +4,10 @@ namespace University.Repositories;
 
 public class InMemoryTeacherRepository : ITeacherRepository
 {
-    // словарь для преподавателей
+    // для хранения преподавателей
     private readonly Dictionary<Guid, Teacher> _data = new();
 
-    // добавить преподавателя
     public void Add(Teacher t) => _data[t.Id] = t;
-    // получить преподавателя по id
     public Teacher? Get(Guid id)
     {
         if (_data.TryGetValue(id, out var t))
@@ -22,6 +20,5 @@ public class InMemoryTeacherRepository : ITeacherRepository
         }
     }
 
-    // вернуть список всех преподавателей
     public IReadOnlyCollection<Teacher> GetAll() => _data.Values.ToList();
 }

@@ -16,13 +16,10 @@ public sealed class CourseService
         _students = students;
     }
 
-    // Добавить курс 
     public void AddCourse(Course course) => _courses.Add(course);
 
-    // Удалить курс по id
     public void RemoveCourse(Guid id) => _courses.Remove(id);
 
-    // Назначить преподавателя
     public void AssignTeacher(Guid courseId, Guid teacherId)
     {
         var course = _courses.Get(courseId) ?? throw new KeyNotFoundException("Course not found");
@@ -31,7 +28,7 @@ public sealed class CourseService
         course.AssignTeacher(teacherId);
     }
 
-    // Получить список всех курсов, которые ведёт данный преподаватель
+    // Получить список всех курсов преподавателя
     public IReadOnlyCollection<Course> GetCoursesByTeacher(Guid teacherId) =>
         _courses.GetAll().Where(c => c.TeacherId == teacherId).ToList();
 
@@ -51,7 +48,6 @@ public sealed class CourseService
         if (_students.Get(studentId) is null)
             throw new KeyNotFoundException("Student not found");
 
-        // Проверка записи студента на курс
         if (!course.StudentIds.Contains(studentId))
             throw new InvalidOperationException("Student is not enrolled in this course");
 
@@ -74,10 +70,15 @@ public sealed class CourseService
     {
         var course = _courses.Get(courseId) ?? throw new KeyNotFoundException("Course not found");
 
-        // Находим студентов по их ID из списка StudentIds
-        return course.StudentIds
-            .Select(id => _students.Get(id))
-            .Where(s => s is not null)
-            .ToList()!;
+        var list = new List<Student>();
+
+        foreach (var id in course.StudentIds) {
+            var student = _students.Get(id);
+            if (student != null) {
+                list.Add(student);
+            }
+            
+        }
+    return list;
     }
 }

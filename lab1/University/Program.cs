@@ -45,7 +45,7 @@ svc.EnrollStudent(c2.Id, s1.Id);
 svc.EnrollStudent(c2.Id, s3.Id);
 
 
-// вывод результата
+// вывод 
 
 foreach (var c in courseRepo.GetAll())
 {
@@ -78,7 +78,7 @@ Console.WriteLine($"\nКурсы студента {s1.FullName}: " +
 //  отписка студента
 svc.UnenrollStudent(c1.Id, s2.Id);
 
-// показать изменения по курсу c1
+// показать изменения по курсу 
 Console.WriteLine($"\nПосле отписки: студенты на \"{c1.Title}\": " +
                   (svc.GetStudentsByCourse(c1.Id).Any()
                       ? string.Join(", ", svc.GetStudentsByCourse(c1.Id).Select(x => x.FullName))

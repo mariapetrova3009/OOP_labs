@@ -8,16 +8,16 @@ public abstract class Course
     public Guid? TeacherId { get; private set; }
     public List<Guid> StudentIds { get; } = new();
     
-    // конструктор могут вызывать только производные классы
     protected Course(Guid id, string title, string description)
     {
         Id = id; Title = title; Description = description;
     }
 
-    // метод для назначения преподавателя на курс
+    // назначение преподавателя на курс
     public void AssignTeacher(Guid teacherId) => TeacherId = teacherId;
 
-    // метод записи студента на курс
+    // запись студента на курс
+
     public void EnrollStudent(Guid studentId)
     {
         if (StudentIds.Contains(studentId))

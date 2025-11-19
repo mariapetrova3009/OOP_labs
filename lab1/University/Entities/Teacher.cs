@@ -1,6 +1,6 @@
 namespace University.Entities;
 
-public sealed class Teacher
+public class Teacher
 {
     public Guid Id { get; } = Guid.NewGuid();
     public string FullName { get; }
