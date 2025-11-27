@@ -1,27 +1,31 @@
-namespace University.Entities;
+using System;
+using System.Collections.Generic;
 
-public abstract class Course
+namespace UniversityApp;
+
+public class Course
 {
     public Guid Id { get; }
-    public string Title { get; }
-    public string Description { get; }
+    public string Name { get; }
+
     public Guid? TeacherId { get; private set; }
+
     public List<Guid> StudentIds { get; } = new();
-    
-    protected Course(Guid id, string title, string description)
+
+    public Course(Guid id, string name)
     {
-        Id = id; Title = title; Description = description;
+        Id = id;
+        Name = name;
     }
 
-    // назначение преподавателя на курс
-    public void AssignTeacher(Guid teacherId) => TeacherId = teacherId;
-
-    // запись студента на курс
+    public void AssignTeacher(Guid teacherId)
+    {
+        TeacherId = teacherId;
+    }
 
     public void EnrollStudent(Guid studentId)
     {
-        if (StudentIds.Contains(studentId))
-            throw new InvalidOperationException("Student already enrolled");
-        StudentIds.Add(studentId);
+        if (!StudentIds.Contains(studentId))
+            StudentIds.Add(studentId);
     }
 }

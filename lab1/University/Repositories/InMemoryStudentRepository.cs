@@ -1,17 +1,30 @@
-using University.Entities;
+using System;
+using System.Collections.Generic;
 
-namespace University.Repositories;
+namespace UniversityApp;
 
 public class InMemoryStudentRepository : IStudentRepository
 {
-    private readonly Dictionary<Guid, Student> _data = new();
-    public void Add(Student s) => _data[s.Id] = s;
-    public Student? Get(Guid id) {
-    if (_data.TryGetValue(id, out var s))
-        return s;
-    else
+    private readonly List<Student> _students = new();
+
+    public void Add(Student student)
+    {
+        _students.Add(student);
+    }
+
+    public Student? Get(Guid id)
+    {
+        foreach (var s in _students)
+        {
+            if (s.Id == id)
+                return s;
+        }
+
         return null;
     }
 
-    public IReadOnlyCollection<Student> GetAll() => _data.Values.ToList();
+    public List<Student> GetAll()
+    {
+        return _students;
+    }
 }

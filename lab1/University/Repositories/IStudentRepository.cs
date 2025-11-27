@@ -1,10 +1,11 @@
-using University.Entities;
+using System;
+using System.Collections.Generic;
 
-namespace University.Repositories;
+namespace UniversityApp;
 
 public interface IStudentRepository
 {
     void Add(Student student);
     Student? Get(Guid id);
-    IReadOnlyCollection<Student> GetAll();
+    List<Student> GetAll();
 }

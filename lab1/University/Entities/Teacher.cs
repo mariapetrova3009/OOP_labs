@@ -1,11 +1,15 @@
-namespace University.Entities;
+using System;
+
+namespace UniversityApp;
 
 public class Teacher
 {
-    public Guid Id { get; } = Guid.NewGuid();
-    public string FullName { get; }
-    public string Email { get; }
+    public Guid Id { get; }
+    public string Name { get; }
 
-    public Teacher(string fullName, string email)
-    { FullName = fullName; Email = email; }
+    public Teacher(Guid id, string name)
+    {
+        Id = id;
+        Name = name;
+    }
 }

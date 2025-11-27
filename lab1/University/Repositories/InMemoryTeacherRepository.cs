@@ -1,24 +1,30 @@
-using University.Entities;
+using System;
+using System.Collections.Generic;
 
-namespace University.Repositories;
+namespace UniversityApp;
 
 public class InMemoryTeacherRepository : ITeacherRepository
 {
-    // для хранения преподавателей
-    private readonly Dictionary<Guid, Teacher> _data = new();
+    private readonly List<Teacher> _teachers = new();
 
-    public void Add(Teacher t) => _data[t.Id] = t;
-    public Teacher? Get(Guid id)
+    public void Add(Teacher teacher)
     {
-        if (_data.TryGetValue(id, out var t))
-        {
-            return t;
-        }
-        else
-        {
-            return null;
-        }
+        _teachers.Add(teacher);
     }
 
-    public IReadOnlyCollection<Teacher> GetAll() => _data.Values.ToList();
+    public Teacher? Get(Guid id)
+    {
+        foreach (var t in _teachers)
+        {
+            if (t.Id == id)
+                return t;
+        }
+
+        return null;
+    }
+
+    public List<Teacher> GetAll()
+    {
+        return _teachers;
+    }
 }

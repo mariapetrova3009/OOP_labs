@@ -1,21 +1,30 @@
-using University.Entities;
+using System;
+using System.Collections.Generic;
 
-namespace University.Repositories;
+namespace UniversityApp;
 
 public class InMemoryCourseRepository : ICourseRepository
 {
-    // для хранения курсов
-    private readonly Dictionary<Guid, Course> _data = new();
+    private readonly List<Course> _courses = new();
 
-    public void Add(Course course) => _data[course.Id] = course;
-    public void Remove(Guid id) => _data.Remove(id);
-    public Course? Get(Guid id) {
-    if (_data.TryGetValue(id, out var c)) {
-        return c;
-    } else {
-        return null;
-        }
+    public void Add(Course course)
+    {
+        _courses.Add(course);
     }
 
-    public IReadOnlyCollection<Course> GetAll() => _data.Values.ToList();
+    public Course? Get(Guid id)
+    {
+        foreach (var c in _courses)
+        {
+            if (c.Id == id)
+                return c;
+        }
+
+        return null;
+    }
+
+    public List<Course> GetAll()
+    {
+        return _courses;
+    }
 }
