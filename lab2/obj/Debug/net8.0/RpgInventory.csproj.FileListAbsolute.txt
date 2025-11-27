@@ -1,0 +1,15 @@
+/Users/mariapetrova/Documents/Uni/oop/OOP_labs/lab2/obj/Debug/net8.0/RpgInventory.GeneratedMSBuildEditorConfig.editorconfig
+/Users/mariapetrova/Documents/Uni/oop/OOP_labs/lab2/obj/Debug/net8.0/RpgInventory.AssemblyInfoInputs.cache
+/Users/mariapetrova/Documents/Uni/oop/OOP_labs/lab2/obj/Debug/net8.0/RpgInventory.AssemblyInfo.cs
+/Users/mariapetrova/Documents/Uni/oop/OOP_labs/lab2/obj/Debug/net8.0/RpgInventory.csproj.CoreCompileInputs.cache
+/Users/mariapetrova/Documents/Uni/oop/OOP_labs/lab2/obj/Debug/net8.0/RpgInventory.sourcelink.json
+/Users/mariapetrova/Documents/Uni/oop/OOP_labs/lab2/bin/Debug/net8.0/RpgInventory
+/Users/mariapetrova/Documents/Uni/oop/OOP_labs/lab2/bin/Debug/net8.0/RpgInventory.deps.json
+/Users/mariapetrova/Documents/Uni/oop/OOP_labs/lab2/bin/Debug/net8.0/RpgInventory.runtimeconfig.json
+/Users/mariapetrova/Documents/Uni/oop/OOP_labs/lab2/bin/Debug/net8.0/RpgInventory.dll
+/Users/mariapetrova/Documents/Uni/oop/OOP_labs/lab2/bin/Debug/net8.0/RpgInventory.pdb
+/Users/mariapetrova/Documents/Uni/oop/OOP_labs/lab2/obj/Debug/net8.0/RpgInventory.dll
+/Users/mariapetrova/Documents/Uni/oop/OOP_labs/lab2/obj/Debug/net8.0/refint/RpgInventory.dll
+/Users/mariapetrova/Documents/Uni/oop/OOP_labs/lab2/obj/Debug/net8.0/RpgInventory.pdb
+/Users/mariapetrova/Documents/Uni/oop/OOP_labs/lab2/obj/Debug/net8.0/RpgInventory.genruntimeconfig.cache
+/Users/mariapetrova/Documents/Uni/oop/OOP_labs/lab2/obj/Debug/net8.0/ref/RpgInventory.dll

@@ -1,0 +1,67 @@
+{
+  "format": 1,
+  "restore": {
+    "/Users/mariapetrova/Documents/Uni/oop/OOP_labs/lab2/RpgInventory.csproj": {}
+  },
+  "projects": {
+    "/Users/mariapetrova/Documents/Uni/oop/OOP_labs/lab2/RpgInventory.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/mariapetrova/Documents/Uni/oop/OOP_labs/lab2/RpgInventory.csproj",
+        "projectName": "RpgInventory",
+        "projectPath": "/Users/mariapetrova/Documents/Uni/oop/OOP_labs/lab2/RpgInventory.csproj",
+        "packagesPath": "/Users/mariapetrova/.nuget/packages/",
+        "outputPath": "/Users/mariapetrova/Documents/Uni/oop/OOP_labs/lab2/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/Users/mariapetrova/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        },
+        "SdkAnalysisLevel": "10.0.100"
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/10.0.100/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}
